@@ -2,6 +2,8 @@
 
 Regulatory compliance applet, powered by [Exa](https://github.com/exa-labs)
 
+## how does this work?
+
 ## dev setup
 
 ```bash
