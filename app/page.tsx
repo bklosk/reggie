@@ -61,9 +61,6 @@ export default function Home() {
       <section className="bg-[#0f141e] text-white py-32 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-block border border-gray-700 text-gray-300 rounded-full px-4 py-1.5 text-xs font-medium tracking-widest uppercase mb-8">
-              Product
-            </div>
             <h2 className="font-serif text-4xl md:text-5xl mb-6">
               How do we do it?
             </h2>
@@ -84,9 +81,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="font-bold text-lg mb-3 text-white">Automate compliance with trusted data</h3>
+                <h3 className="font-bold text-lg mb-3 text-white">Automate compliance discovery</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Manual checks slow down your process, but with automation and reliable data, you&apos;ll move faster and more securely.
+                  Manual searches are slow, and you'll inevitably miss something. We automate the search for you, so you can focus on the hard parts.
                 </p>
               </div>
             </div>
@@ -163,10 +160,6 @@ export default function Home() {
               <div className="p-6 flex-grow flex flex-col gap-3">
                 <div className="flex justify-between items-center mb-2">
                   <div className="w-1/3 h-4 bg-gray-700/50 rounded-full"></div>
-                  <div className="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-full flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></div>
-                    <span className="text-[10px] font-bold text-red-400 tracking-wider">NEW RISK</span>
-                  </div>
                 </div>
                 
                 {/* Alert Item 1 - Critical */}
@@ -199,16 +192,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Floating Alert Badge */}
-            <div className="absolute -right-4 md:-right-8 top-1/4 bg-[#1a2130] border border-gray-700/50 shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-xl p-4 flex items-center gap-4 z-20">
-              <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center border border-red-500/20">
-                <div className="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.8)] animate-pulse"></div>
-              </div>
-              <div className="flex flex-col gap-2 pr-4">
-                <div className="w-24 h-2.5 bg-gray-200/90 rounded-full"></div>
-                <div className="w-16 h-1.5 bg-gray-500/70 rounded-full"></div>
-              </div>
-            </div>
           </div>
           
           {/* Text Side */}
@@ -262,7 +245,7 @@ export default function Home() {
             <div className="bg-white text-[#111827] p-8 rounded-xl shadow-lg flex flex-col h-full">
               <div className="flex items-center gap-2 mb-6 font-bold text-lg">
                 <span className="w-6 h-6 bg-black rounded flex items-center justify-center text-white text-xs">
-                  KH
+                  GF
                 </span>
                 My Girlfriend
               </div>
@@ -280,7 +263,7 @@ export default function Home() {
                 <div>
                   <div className="font-bold text-sm">Kelsey Hall</div>
                   <div className="text-xs text-gray-500">
-                    My actual girlfriend
+                    Actual girlfriend
                   </div>
                 </div>
               </div>

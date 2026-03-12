@@ -1,4 +1,4 @@
-import { PanelLeft, Home, Search, Bell, User, Settings } from "lucide-react";
+import { PanelLeft, Search, User, Radar, ListPlus } from "lucide-react";
 
 export default function RadarLoading() {
   return (
@@ -6,27 +6,24 @@ export default function RadarLoading() {
       {/* Sidebar Skeleton */}
       <div className="flex flex-col text-white z-0 overflow-hidden whitespace-nowrap w-20 mr-4">
         <div className="w-64 pt-6 pb-8 px-4 flex flex-col gap-6 h-full">
-          <div className="flex items-center gap-4 px-2 mb-8">
-            <div className="p-2 -ml-2 text-gray-500">
+          <div className="flex items-center justify-end px-2 mb-8">
+            <div className="p-2 -mr-2 text-gray-500 shrink-0">
               <PanelLeft size={24} />
             </div>
           </div>
           
           <nav className="flex flex-col gap-2">
             <div className="flex items-center gap-4 text-gray-500 p-2">
-              <Home size={24} className="shrink-0" />
+              <Radar size={24} className="shrink-0" />
+            </div>
+            <div className="flex items-center gap-4 text-gray-500 p-2">
+              <ListPlus size={24} className="shrink-0" />
             </div>
             <div className="flex items-center gap-4 text-gray-500 p-2">
               <Search size={24} className="shrink-0" />
             </div>
             <div className="flex items-center gap-4 text-gray-500 p-2">
-              <Bell size={24} className="shrink-0" />
-            </div>
-            <div className="flex items-center gap-4 text-gray-500 p-2">
               <User size={24} className="shrink-0" />
-            </div>
-            <div className="flex items-center gap-4 text-gray-500 p-2">
-              <Settings size={24} className="shrink-0" />
             </div>
           </nav>
         </div>
