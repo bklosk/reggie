@@ -39,7 +39,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-end">
-            <div className="bg-gradient-to-br from-[#4f8079] to-[#4f7a69] p-12 rounded-3xl shadow-lg max-w-lg text-white">
+            <div className="bg-gradient-to-br from-[#2CA58D] to-[#208672] p-12 rounded-3xl shadow-lg max-w-lg text-white">
               <h3 className="font-serif text-3xl mb-4">
                 Want to find rules before they find you?
               </h3>
@@ -57,11 +57,180 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How it works Section */}
+      <section className="bg-[#0f141e] text-white py-32 px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <div className="inline-block border border-gray-700 text-gray-300 rounded-full px-4 py-1.5 text-xs font-medium tracking-widest uppercase mb-8">
+              Product
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl mb-6">
+              How do we do it?
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+              We stay on the hunt across the regulatory landscape.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="bg-[#151b28] rounded-2xl overflow-hidden border border-gray-800/60 flex flex-col">
+              <div className="h-48 bg-[#1a2130] relative flex items-center justify-center overflow-hidden">
+                {/* Abstract grid/isometric visual */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] [transform:rotateX(60deg)_rotateZ(45deg)_scale(1.5)]"></div>
+                <div className="relative z-10 bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-lg shadow-2xl [transform:rotateX(60deg)_rotateZ(45deg)]">
+                  <div className="w-16 h-2 bg-white/20 rounded-full mb-2"></div>
+                  <div className="w-24 h-2 bg-white/20 rounded-full"></div>
+                </div>
+              </div>
+              <div className="p-8 flex-grow">
+                <h3 className="font-bold text-lg mb-3 text-white">Automate compliance with trusted data</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Manual checks slow down your process, but with automation and reliable data, you&apos;ll move faster and more securely.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-[#151b28] rounded-2xl overflow-hidden border border-gray-800/60 flex flex-col">
+              <div className="h-48 bg-[#1a2130] relative flex items-center justify-center overflow-hidden">
+                {/* Radiating lines visual */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-20">
+                  {[...Array(8)].map((_, i) => (
+                    <div key={i} className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-white to-transparent" style={{ transform: `rotate(${i * 22.5}deg)` }}></div>
+                  ))}
+                </div>
+                <div className="relative z-10 bg-white px-6 py-4 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.1)] flex items-center gap-2">
+                  <span className="font-bold text-black tracking-tight">reggie</span>
+                  <div className="flex gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-400"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-pink-400"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-yellow-400"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-8 flex-grow">
+                <h3 className="font-bold text-lg mb-3 text-white">One system = Reduced cost</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  When your systems aren&apos;t connected, compliance risks can go unnoticed and your costs can skyrocket. Reduce your compliance cost - go with reggie.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-[#151b28] rounded-2xl overflow-hidden border border-gray-800/60 flex flex-col">
+              <div className="h-48 bg-[#1a2130] relative flex items-center justify-center overflow-hidden">
+                {/* Connected nodes visual */}
+                <div className="flex flex-col gap-3 relative z-10 w-full px-12">
+                  <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2"></div>
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="bg-[#222b3d] border border-gray-700/50 rounded-lg p-3 flex items-center gap-3 relative z-10">
+                      <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-white/40"></div>
+                      </div>
+                      <div>
+                        <div className="w-16 h-2 bg-white/30 rounded-full mb-1.5"></div>
+                        <div className="w-24 h-1.5 bg-white/10 rounded-full"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="p-8 flex-grow">
+                <h3 className="font-bold text-lg mb-3 text-white">Cut false positives, clear backlogs</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  False positives slow down and divert attention from real risks. Smart alerts help you reduce the backlog and focus on what requires immediate action.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Highlight Section */}
+      <section className="bg-[#0f141e] text-white py-24 px-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          {/* Image Side */}
+          <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden bg-[#151b28] border border-gray-800/60 flex items-center justify-center">
+            {/* Abstract visual placeholder matching the design language */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+            <div className="relative z-10 w-3/4 h-3/4 bg-[#1a2130] rounded-xl border border-gray-700/50 shadow-2xl flex flex-col overflow-hidden">
+              <div className="h-10 border-b border-gray-700/50 flex items-center px-4 gap-2 bg-[#151b28]">
+                <div className="w-3 h-3 rounded-full bg-gray-600"></div>
+                <div className="w-3 h-3 rounded-full bg-gray-600"></div>
+                <div className="w-3 h-3 rounded-full bg-gray-600"></div>
+              </div>
+              <div className="p-6 flex-grow flex flex-col gap-3">
+                <div className="flex justify-between items-center mb-2">
+                  <div className="w-1/3 h-4 bg-gray-700/50 rounded-full"></div>
+                  <div className="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-full flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></div>
+                    <span className="text-[10px] font-bold text-red-400 tracking-wider">NEW RISK</span>
+                  </div>
+                </div>
+                
+                {/* Alert Item 1 - Critical */}
+                <div className="w-full bg-red-500/5 rounded-lg border border-red-500/20 p-3 flex gap-3 items-start relative overflow-hidden">
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-500"></div>
+                  <div className="w-2 h-2 mt-1 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]"></div>
+                  <div className="flex-grow flex flex-col gap-2">
+                    <div className="w-3/4 h-2.5 bg-gray-300/90 rounded-full"></div>
+                    <div className="w-1/2 h-1.5 bg-gray-500/70 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Alert Item 2 - Warning */}
+                <div className="w-full bg-gray-800/30 rounded-lg border border-gray-700/50 p-3 flex gap-3 items-start">
+                  <div className="w-2 h-2 mt-1 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.6)]"></div>
+                  <div className="flex-grow flex flex-col gap-2">
+                    <div className="w-2/3 h-2.5 bg-gray-400/80 rounded-full"></div>
+                    <div className="w-1/3 h-1.5 bg-gray-600/60 rounded-full"></div>
+                  </div>
+                </div>
+
+                {/* Alert Item 3 - Info */}
+                <div className="w-full bg-gray-800/30 rounded-lg border border-gray-700/50 p-3 flex gap-3 items-start">
+                  <div className="w-2 h-2 mt-1 rounded-full bg-[#2CA58D] shadow-[0_0_8px_rgba(44,165,141,0.6)]"></div>
+                  <div className="flex-grow flex flex-col gap-2">
+                    <div className="w-4/5 h-2.5 bg-gray-400/80 rounded-full"></div>
+                    <div className="w-2/5 h-1.5 bg-gray-600/60 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Alert Badge */}
+            <div className="absolute -right-4 md:-right-8 top-1/4 bg-[#1a2130] border border-gray-700/50 shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-xl p-4 flex items-center gap-4 z-20">
+              <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center border border-red-500/20">
+                <div className="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.8)] animate-pulse"></div>
+              </div>
+              <div className="flex flex-col gap-2 pr-4">
+                <div className="w-24 h-2.5 bg-gray-200/90 rounded-full"></div>
+                <div className="w-16 h-1.5 bg-gray-500/70 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Text Side */}
+          <div>
+            <div className="inline-block border border-gray-700 text-gray-300 rounded-full px-4 py-1.5 text-xs font-medium tracking-widest uppercase mb-6">
+              Continuous Monitoring
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl mb-6 leading-tight">
+              Never miss a regulatory update
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              Compliance isn&apos;t a one-time check. Our platform continuously scans for regulatory changes and automatically flags risks before they become liabilities. Keep your team focused on growth, not manual research.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="bg-[#0f141e] text-white py-32 px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl mb-12">
-            Trusted by world-class teams
+            Loved by real people, with real stakes
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -84,7 +253,7 @@ export default function Home() {
                   className="w-10 h-10 rounded object-cover flex-shrink-0"
                 />
                 <div>
-                  <div className="font-bold text-sm">Human Person</div>
+                  <div className="font-bold text-sm">Human Personson</div>
                   <div className="text-xs text-gray-500">CEO, OpenCompany</div>
                 </div>
               </div>
@@ -93,9 +262,9 @@ export default function Home() {
             <div className="bg-white text-[#111827] p-8 rounded-xl shadow-lg flex flex-col h-full">
               <div className="flex items-center gap-2 mb-6 font-bold text-lg">
                 <span className="w-6 h-6 bg-black rounded flex items-center justify-center text-white text-xs">
-                  N
+                  KH
                 </span>
-                Notion
+                My Girlfriend
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
                 Uh, cool, I guess? You want me to say "hashtag reggie rocks?" Why would I do that?
@@ -122,7 +291,7 @@ export default function Home() {
                 <span className="w-6 h-6 bg-black rounded flex items-center justify-center text-white text-xs">
                   EM
                 </span>
-                Emily
+                Friend from improv class
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
                 Oh, yo, that's actually cool, I've spent the past year searching for laws and news...

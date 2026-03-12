@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Reggie - Regulatory Compliance",
-  description: "Automate onboarding, monitoring, and compliance.",
+  title: "reggie",
+  description: "Reggie is a tool that helps you find laws and news that are relevant to you.",
 };
 
 export default function RootLayout({
