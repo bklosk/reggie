@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen font-sans bg-[#0f141e] flex flex-col">
@@ -26,8 +28,8 @@ export default function Home() {
           </div>
         </nav>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-end w-full">
-          <div className="max-w-xl">
+        <div className="mx-auto grid md:grid-cols-2 gap-16 items-end w-full">
+          <div className="max-w-2xl">
             <h1 className="font-serif text-5xl md:text-7xl leading-[1.1] tracking-tight mb-6">
               We know it&apos;s hard to scale compliance
             </h1>
@@ -37,16 +39,19 @@ export default function Home() {
           </div>
 
           <div className="flex justify-end">
-            <div className="bg-gradient-to-br from-teal-400 to-emerald-600 p-10 rounded-3xl shadow-xl max-w-md text-white">
+            <div className="bg-gradient-to-br from-[#4f8079] to-[#4f7a69] p-12 rounded-3xl shadow-lg max-w-lg text-white">
               <h3 className="font-serif text-3xl mb-4">
                 Want to find rules before they find you?
               </h3>
               <p className="mb-8 text-teal-50 text-lg font-serif">
                 Just ask reggie.
               </p>
-              <button className="bg-[#0f141e] text-white px-8 py-4 rounded-full font-medium hover:bg-black transition w-full">
-                Book a demo
-              </button>
+              <a
+                href="/radar"
+                className="inline-flex items-center justify-center bg-[#0f141e] text-white px-8 py-4 rounded-full font-medium hover:bg-black transition w-full"
+              >
+                Get started
+              </a>
             </div>
           </div>
         </div>
@@ -55,37 +60,32 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="bg-[#0f141e] text-white py-32 px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 flex justify-between items-end">
-            <h2 className="font-serif text-4xl md:text-5xl">
-              Trusted by world-class teams
-            </h2>
-            <a
-              href="#"
-              className="text-sm text-gray-400 hover:text-white transition flex items-center gap-2"
-            >
-              View all customer stories <span className="text-lg">→</span>
-            </a>
-          </div>
+          <h2 className="font-serif text-4xl md:text-5xl mb-12">
+            Trusted by world-class teams
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white text-[#111827] p-8 rounded-xl shadow-lg flex flex-col h-full">
               <div className="flex items-center gap-2 mb-6 font-bold text-lg">
                 <span className="w-6 h-6 bg-black rounded flex items-center justify-center text-white text-xs">
-                  OR
+                  OC
                 </span>
-                OpenRouter
+                OpenCompany
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
-                OpenRouter has a laser focus on bringing a great developer
-                experience to all language models, and reggie is the best way
-                we&apos;ve found for grounding AI in the real world in a
-                model-agnostic way.
+                I am a real person and I love reggie!!! Reggie is able to find proposed rules that my analysts would never track down on their own. #reggieisthebest  #iamarealhumanperson
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded bg-gray-200 flex-shrink-0"></div>
+                <Image
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                  alt="Alex Atallah"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded object-cover flex-shrink-0"
+                />
                 <div>
-                  <div className="font-bold text-sm">Alex Atallah</div>
-                  <div className="text-xs text-gray-500">CEO, OpenRouter</div>
+                  <div className="font-bold text-sm">Human Person</div>
+                  <div className="text-xs text-gray-500">CEO, OpenCompany</div>
                 </div>
               </div>
             </div>
@@ -98,17 +98,20 @@ export default function Home() {
                 Notion
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
-                reggie&apos;s powerful search capabilities have been
-                instrumental in delivering the high-quality, relevant web
-                content our users need while maintaining our commitment to
-                privacy and user control.
+                Uh, cool, I guess? You want me to say "hashtag reggie rocks?" Why would I do that?
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded bg-gray-200 flex-shrink-0"></div>
+                <Image
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face"
+                  alt="Sarah Sachs"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded object-cover flex-shrink-0"
+                />
                 <div>
-                  <div className="font-bold text-sm">Sarah Sachs</div>
+                  <div className="font-bold text-sm">Kelsey Hall</div>
                   <div className="text-xs text-gray-500">
-                    AI Engineering Lead, Notion
+                    My actual girlfriend
                   </div>
                 </div>
               </div>
@@ -116,21 +119,25 @@ export default function Home() {
 
             <div className="bg-white text-[#111827] p-8 rounded-xl shadow-lg flex flex-col h-full">
               <div className="flex items-center gap-2 mb-6 font-bold text-lg">
-                <span className="w-6 h-6 bg-black rounded-full flex items-center justify-center text-white text-xs">
-                  ▲
+                <span className="w-6 h-6 bg-black rounded flex items-center justify-center text-white text-xs">
+                  EM
                 </span>
-                Vercel
+                Emily
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
-                This is so powerful. reggie is like Perplexity-as-a-service. The
-                infrastructure to ground your AI products on real world data and
-                facts.
+                Oh, yo, that's actually cool, I've spent the past year searching for laws and news...
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded bg-gray-200 flex-shrink-0"></div>
+                <Image
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face"
+                  alt="Guillermo Rauch"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded object-cover flex-shrink-0"
+                />
                 <div>
-                  <div className="font-bold text-sm">Guillermo Rauch</div>
-                  <div className="text-xs text-gray-500">CEO, Vercel</div>
+                  <div className="font-bold text-sm">Emily</div>
+                  <div className="text-xs text-gray-500">Friend who works in risk management</div>
                 </div>
               </div>
             </div>
@@ -139,9 +146,9 @@ export default function Home() {
       </section>
 
       {/* Footer / Certifications */}
-      <footer className="bg-[#0f141e] text-white py-20 px-8">
+      <footer className="bg-[#0f141e] text-white pt-12 pb-20 px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800 text-sm text-gray-500">
+          <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-gray-800 text-sm text-gray-500">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <span className="font-bold text-xl tracking-tight text-white">
                 reggie
