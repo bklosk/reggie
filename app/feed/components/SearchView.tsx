@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import { useChat } from "@ai-sdk/react";
 import { Send, Square, Search, ExternalLink, Loader2 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import type { UIMessage } from "ai";
 
 const SUGGESTIONS = [
@@ -35,35 +36,19 @@ function SourcePill({ url, title }: { url: string; title?: string }) {
 }
 
 function MessageContent({ text }: { text: string }) {
-  const paragraphs = text.split("\n");
-
   return (
-    <div className="prose prose-sm prose-gray max-w-none [&_a]:text-teal-700 [&_a]:underline [&_a]:underline-offset-2 [&_a:hover]:text-teal-900">
-      {paragraphs.map((line, i) => {
-        if (!line.trim()) return <br key={i} />;
-
-        const parts = line.split(/(\[.*?\]\(.*?\))/g);
-        return (
-          <p key={i} className="mb-2 last:mb-0 leading-relaxed">
-            {parts.map((part, j) => {
-              const linkMatch = part.match(/\[(.*?)\]\((.*?)\)/);
-              if (linkMatch) {
-                return (
-                  <a
-                    key={j}
-                    href={linkMatch[2]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {linkMatch[1]}
-                  </a>
-                );
-              }
-              return <span key={j}>{part}</span>;
-            })}
-          </p>
-        );
-      })}
+    <div className="prose prose-sm prose-gray max-w-none prose-headings:font-serif prose-headings:font-medium prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-p:leading-relaxed prose-li:leading-relaxed prose-a:text-teal-700 prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-teal-900 prose-pre:rounded-xl prose-pre:bg-gray-100 prose-code:rounded prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:text-gray-800 prose-code:before:content-none prose-code:after:content-none">
+      <ReactMarkdown
+        components={{
+          a: ({ href, children }) => (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              {children}
+            </a>
+          ),
+        }}
+      >
+        {text}
+      </ReactMarkdown>
     </div>
   );
 }

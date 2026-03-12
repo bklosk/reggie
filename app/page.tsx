@@ -90,9 +90,9 @@ export default async function Home() {
                 </div>
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="font-bold text-lg mb-3 text-white">Radar Search</h3>
+                <h3 className="font-bold text-lg mb-3 text-white">Search, but better</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Manual searches are slow, and you&apos;ll inevitably miss something. We keep a general lookout for you, so you have a fighting chance.
+                  Reggie refines and iterates on your keyword searches, helping you find results that might have been missed.
                 </p>
               </div>
             </div>
@@ -116,9 +116,9 @@ export default async function Home() {
                 </div>
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="font-bold text-lg mb-3 text-white">One system = Reduced cost</h3>
+                <h3 className="font-bold text-lg mb-3 text-white">Monitors</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  When your systems aren&apos;t connected, compliance risks can go unnoticed and your costs can skyrocket. Reduce your compliance cost - go with reggie.
+                Our Monitors system lets you create websets to watch for tiny regulation changes over time. You can set it up to notify you when a new rule is proposed, or when a rule is updated.
                 </p>
               </div>
             </div>
@@ -143,9 +143,9 @@ export default async function Home() {
                 </div>
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="font-bold text-lg mb-3 text-white">Cut false positives, clear backlogs</h3>
+                <h3 className="font-bold text-lg mb-3 text-white">Regulatory Radar</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  False positives slow down and divert attention from real risks. Smart alerts help you reduce the backlog and focus on what requires immediate action.
+                Manual searches are slow, and you&apos;ll inevitably miss something. We keep a general lookout for you, so you have a fighting chance.
                 </p>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default async function Home() {
               Never miss a regulatory update
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              Compliance isn&apos;t a one-time check. Our platform continuously scans for regulatory changes and automatically flags risks before they become liabilities. Keep your team focused on growth, not manual research.
+              Compliance isn&apos;t one-and-done. Our platform continuously scans for regulatory changes and automatically flags risks before they become liabilities.
             </p>
           </div>
         </div>
@@ -286,7 +286,7 @@ export default async function Home() {
                 Friend from improv class
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
-                Oh, yo, that&apos;s actually cool, I&apos;ve spent the past year searching for laws and news...
+                Oh, that&apos;s actually cool, I&apos;ve spent the past year searching for laws and this kind of news every day.
               </p>
               <div className="flex items-center gap-3">
                 <Image
@@ -297,7 +297,7 @@ export default async function Home() {
                   className="w-10 h-10 rounded object-cover flex-shrink-0"
                 />
                 <div>
-                  <div className="font-bold text-sm">Emily</div>
+                  <div className="font-bold text-sm">Emilio</div>
                   <div className="text-xs text-gray-500">Friend who works in risk management</div>
                 </div>
               </div>

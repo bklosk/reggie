@@ -12,6 +12,7 @@
     "@ai-sdk/react": "^3.0.118",
     "@exalabs/ai-sdk": "^1.0.5",
     "@openrouter/ai-sdk-provider": "^2.3.0",
+    "@tailwindcss/typography": "^0.5.19",
     "ai": "^6.0.116",
     "exa-js": "^2.8.0",
     "lucide-react": "^0.577.0",
@@ -19,6 +20,7 @@
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {

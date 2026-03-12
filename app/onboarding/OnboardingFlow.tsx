@@ -301,7 +301,6 @@ export function OnboardingFlow() {
                       </div>
                       <div>
                         <div className="font-medium text-white">{item.title}</div>
-                        <div className="text-sm text-white/60">{item.description}</div>
                       </div>
                     </motion.div>
                   ))}
@@ -311,7 +310,7 @@ export function OnboardingFlow() {
           </motion.div>
         </section>
 
-        <section className="m-6 flex min-h-[calc(100vh-3rem)] flex-col rounded-[2rem] bg-[#111827] px-6 py-8 text-white md:m-8 md:px-10 md:py-10">
+        <section className="m-6 flex min-h-[calc(100vh-3rem)] flex-col rounded-[2rem] bg-[#f4f4f0] bg-dot-pattern px-6 py-8 text-[#111827] md:m-8 md:px-10 md:py-10">
           <div className="flex flex-1 flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 16 }}
@@ -320,10 +319,10 @@ export function OnboardingFlow() {
               className="mb-10"
             >
               <div>
-                <h2 className="max-w-xl font-serif text-4xl leading-tight text-white md:text-[2.8rem]">
+                <h2 className="max-w-xl font-serif text-4xl leading-tight text-[#111827] md:text-[2.8rem]">
                   {currentStep.title}
                 </h2>
-                <p className="mt-3 max-w-2xl text-base leading-7 text-white/60">
+                <p className="mt-3 max-w-2xl text-base leading-7 text-gray-500">
                   {currentStep.description}
                 </p>
               </div>
@@ -342,19 +341,19 @@ export function OnboardingFlow() {
                 {step === 0 ? (
                   <div className="grid gap-6">
                     <div className="bg-transparent">
-                      <label className="mb-3 block text-sm font-medium text-white/65">
+                      <label className="mb-3 block text-sm font-medium text-gray-500">
                         Your name
                       </label>
                       <input
                         value={form.name}
                         onChange={(event) => updateField("name", event.target.value)}
                         placeholder="e.g. Maya Patel"
-                        className="w-full border-0 border-b border-white/20 bg-transparent px-0 py-4 text-lg text-white outline-none transition placeholder:text-white/30 focus:border-white"
+                        className="w-full border-0 border-b border-gray-300 bg-transparent px-0 py-4 text-lg text-[#111827] outline-none transition placeholder:text-gray-400 focus:border-[#111827]"
                       />
                     </div>
 
                     <div className="bg-transparent">
-                      <label className="mb-3 block text-sm font-medium text-white/65">
+                      <label className="mb-3 block text-sm font-medium text-gray-500">
                         Company name
                       </label>
                       <input
@@ -363,7 +362,7 @@ export function OnboardingFlow() {
                           updateField("companyName", event.target.value)
                         }
                         placeholder="e.g. Northstar Industrial"
-                        className="w-full border-0 border-b border-white/20 bg-transparent px-0 py-4 text-lg text-white outline-none transition placeholder:text-white/30 focus:border-white"
+                        className="w-full border-0 border-b border-gray-300 bg-transparent px-0 py-4 text-lg text-[#111827] outline-none transition placeholder:text-gray-400 focus:border-[#111827]"
                       />
                     </div>
                   </div>
@@ -372,7 +371,7 @@ export function OnboardingFlow() {
                 {step === 1 ? (
                   <div className="grid gap-6">
                     <div className="bg-transparent">
-                      <label className="mb-3 block text-sm font-medium text-white/65">
+                      <label className="mb-3 block text-sm font-medium text-gray-500">
                         Industry
                       </label>
                       <input
@@ -380,7 +379,7 @@ export function OnboardingFlow() {
                         value={form.industry}
                         onChange={(event) => updateField("industry", event.target.value)}
                         placeholder="Choose one or type your own"
-                        className="w-full border-0 border-b border-white/20 bg-transparent px-0 py-4 text-lg text-white outline-none transition placeholder:text-white/30 focus:border-white"
+                        className="w-full border-0 border-b border-gray-300 bg-transparent px-0 py-4 text-lg text-[#111827] outline-none transition placeholder:text-gray-400 focus:border-[#111827]"
                       />
                       <datalist id="industry-suggestions">
                         {INDUSTRY_SUGGESTIONS.map((industry) => (
@@ -397,8 +396,8 @@ export function OnboardingFlow() {
                             onClick={() => updateField("industry", industry)}
                             className={`rounded-full px-4 py-2 text-sm transition ${
                               form.industry === industry
-                                ? "bg-white text-[#111827]"
-                                : "bg-white/10 text-white/75 hover:bg-white/15"
+                                ? "bg-[#111827] text-white"
+                                : "bg-black/5 text-gray-600 hover:bg-black/10"
                             }`}
                           >
                             {industry}
@@ -408,7 +407,7 @@ export function OnboardingFlow() {
                     </div>
 
                     <div className="bg-transparent">
-                      <label className="mb-3 block text-sm font-medium text-white/65">
+                      <label className="mb-3 block text-sm font-medium text-gray-500">
                         Jurisdictions
                       </label>
                       <input
@@ -422,7 +421,7 @@ export function OnboardingFlow() {
                           }
                         }}
                         placeholder="Type a country, state, or market and press Enter"
-                        className="w-full border-0 border-b border-white/20 bg-transparent px-0 py-4 text-lg text-white outline-none transition placeholder:text-white/30 focus:border-white"
+                        className="w-full border-0 border-b border-gray-300 bg-transparent px-0 py-4 text-lg text-[#111827] outline-none transition placeholder:text-gray-400 focus:border-[#111827]"
                       />
                       <div className="mt-4 space-y-2">
                         <AnimatePresence>
@@ -433,13 +432,13 @@ export function OnboardingFlow() {
                               initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 8 }}
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -8 }}
-                              className="flex items-center justify-between border-b border-white/10 py-3"
+                              className="flex items-center justify-between border-b border-gray-200 py-3"
                             >
-                              <span className="text-base text-white">{jurisdiction}</span>
+                              <span className="text-base text-[#111827]">{jurisdiction}</span>
                               <button
                                 type="button"
                                 onClick={() => removeJurisdiction(jurisdiction)}
-                                className="text-sm text-white/55 transition hover:text-white"
+                                className="text-sm text-gray-400 transition hover:text-[#111827]"
                                 aria-label={`Remove ${jurisdiction}`}
                               >
                                 <span className="inline-flex items-center gap-1">
@@ -466,7 +465,7 @@ export function OnboardingFlow() {
                               className={`rounded-full px-4 py-2 text-sm transition ${
                                 isSelected
                                   ? "bg-[#2CA58D] text-white"
-                                  : "bg-white/10 text-white/75 hover:bg-white/15"
+                                  : "bg-black/5 text-gray-600 hover:bg-black/10"
                               }`}
                             >
                               {jurisdiction}
@@ -500,7 +499,7 @@ export function OnboardingFlow() {
 
                 {step === 3 ? (
                   <div className="grid gap-6">
-                    <div className="bg-[#05070b] p-7 text-white shadow-[0_20px_50px_rgba(0,0,0,0.24)]">
+                    <div className="rounded-2xl bg-[#111827] p-7 text-white shadow-[0_20px_50px_rgba(0,0,0,0.24)]">
                       <h3 className="font-serif text-4xl leading-tight">
                         Your feed will open with signals tuned to {form.companyName}.
                       </h3>
@@ -515,34 +514,34 @@ export function OnboardingFlow() {
                     </div>
 
                     <div className="grid gap-6 md:grid-cols-2">
-                      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-sm">
-                        <div className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-white/45">
+                      <div className="rounded-[2rem] border border-gray-200 bg-white p-6 shadow-sm">
+                        <div className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-gray-400">
                           Account
                         </div>
                         <div className="space-y-4">
                           <div>
-                            <div className="text-sm text-white/45">Name</div>
-                            <div className="font-serif text-2xl text-white">
+                            <div className="text-sm text-gray-400">Name</div>
+                            <div className="font-serif text-2xl text-[#111827]">
                               {form.name}
                             </div>
                           </div>
                           <div>
-                            <div className="text-sm text-white/45">Company</div>
-                            <div className="font-serif text-2xl text-white">
+                            <div className="text-sm text-gray-400">Company</div>
+                            <div className="font-serif text-2xl text-[#111827]">
                               {form.companyName}
                             </div>
                           </div>
                           <div>
-                            <div className="text-sm text-white/45">Industry</div>
-                            <div className="font-serif text-2xl text-white">
+                            <div className="text-sm text-gray-400">Industry</div>
+                            <div className="font-serif text-2xl text-[#111827]">
                               {form.industry}
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-sm">
-                        <div className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-white/45">
+                      <div className="rounded-[2rem] border border-gray-200 bg-white p-6 shadow-sm">
+                        <div className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-gray-400">
                           Monitoring scope
                         </div>
                         <div className="mb-5 flex flex-wrap gap-2">
@@ -559,7 +558,7 @@ export function OnboardingFlow() {
                           {form.jurisdictions.map((jurisdiction) => (
                             <span
                               key={jurisdiction}
-                              className="rounded-full bg-white/10 px-3 py-2 text-sm text-white/80"
+                              className="rounded-full bg-black/5 px-3 py-2 text-sm text-gray-600"
                             >
                               {jurisdiction}
                             </span>
@@ -573,9 +572,9 @@ export function OnboardingFlow() {
               </AnimatePresence>
             </div>
 
-            <div className="mt-8 border-t border-white/10 pt-6">
+            <div className="mt-8 border-t border-gray-200 pt-6">
               {error ? (
-                <div className="mb-4 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+                <div className="mb-4 rounded-2xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700">
                   {error}
                 </div>
               ) : null}
@@ -585,7 +584,7 @@ export function OnboardingFlow() {
                   type="button"
                   onClick={goToPreviousStep}
                   disabled={step === 0 || isSubmitting}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/70 transition hover:border-white/30 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 px-5 py-3 text-sm font-medium text-gray-500 transition hover:border-gray-400 hover:text-[#111827] disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <ArrowLeft size={16} />
                   Back
@@ -598,7 +597,7 @@ export function OnboardingFlow() {
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
                     disabled={!isCurrentStepValid}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-[#111827] transition hover:bg-white/90 disabled:cursor-not-allowed disabled:bg-white/20 disabled:text-white/45"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#111827] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#1f2937] disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
                   >
                     Continue
                     <ArrowRight size={16} />
