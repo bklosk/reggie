@@ -1,6 +1,15 @@
 import Image from "next/image";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { ONBOARDING_COOKIE_NAME } from "@/lib/onboarding";
 
-export default function Home() {
+export default async function Home() {
+  const cookieStore = await cookies();
+
+  if (cookieStore.get(ONBOARDING_COOKIE_NAME)?.value === "true") {
+    redirect("/feed");
+  }
+
   return (
     <main className="min-h-screen font-sans bg-[#0f141e] flex flex-col">
       {/* Hero Section */}
@@ -47,7 +56,7 @@ export default function Home() {
                 Just ask reggie.
               </p>
               <a
-                href="/radar"
+                href="/onboarding"
                 className="inline-flex items-center justify-center bg-[#0f141e] text-white px-8 py-4 rounded-full font-medium hover:bg-black transition w-full"
               >
                 Get started
@@ -83,7 +92,7 @@ export default function Home() {
               <div className="p-8 flex-grow">
                 <h3 className="font-bold text-lg mb-3 text-white">Automate compliance discovery</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Manual searches are slow, and you'll inevitably miss something. We automate the search for you, so you can focus on the hard parts.
+                  Manual searches are slow, and you&apos;ll inevitably miss something. We automate the search for you, so you can focus on the hard parts.
                 </p>
               </div>
             </div>
@@ -250,7 +259,7 @@ export default function Home() {
                 My Girlfriend
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
-                Uh, cool, I guess? You want me to say "hashtag reggie rocks?" Why would I do that?
+                Uh, cool, I guess? You want me to say &quot;hashtag reggie rocks?&quot; Why would I do that?
               </p>
               <div className="flex items-center gap-3">
                 <Image
@@ -277,7 +286,7 @@ export default function Home() {
                 Friend from improv class
               </div>
               <p className="text-[15px] leading-relaxed mb-12 flex-grow">
-                Oh, yo, that's actually cool, I've spent the past year searching for laws and news...
+                Oh, yo, that&apos;s actually cool, I&apos;ve spent the past year searching for laws and news...
               </p>
               <div className="flex items-center gap-3">
                 <Image
