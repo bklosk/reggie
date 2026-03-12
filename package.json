@@ -9,11 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/react": "^3.0.118",
+    "@exalabs/ai-sdk": "^1.0.5",
+    "@openrouter/ai-sdk-provider": "^2.3.0",
+    "ai": "^6.0.116",
+    "exa-js": "^2.8.0",
     "lucide-react": "^0.577.0",
     "motion": "^12.35.2",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",

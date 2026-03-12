@@ -61,7 +61,7 @@ export function FeedApp() {
   const renderView = () => {
     switch (currentView) {
       case "radar":
-        return <RadarView />;
+        return <RadarView profile={profile} />;
       case "watchlist":
         return <WatchlistView />;
       case "search":
@@ -110,9 +110,6 @@ export function FeedApp() {
                         <div className="h-2 w-2 rounded-full bg-yellow-400" />
                       </div>
                     </div>
-                    <p className="mt-1 text-xs text-gray-400">
-                      Monitoring for {profile?.companyName}
-                    </p>
                   </div>
                 </motion.div>
               ) : null}
@@ -137,7 +134,7 @@ export function FeedApp() {
               }`}
             >
               <Radar size={24} className="shrink-0" />
-              {isSidebarOpen ? <span className="font-medium">Radar</span> : null}
+              {isSidebarOpen ? <span className="font-serif font-medium">Radar</span> : null}
             </button>
             <button
               onClick={() => setCurrentView("watchlist")}
@@ -150,7 +147,7 @@ export function FeedApp() {
               }`}
             >
               <ListPlus size={24} className="shrink-0" />
-              {isSidebarOpen ? <span className="font-medium">Watchlist</span> : null}
+              {isSidebarOpen ? <span className="font-serif font-medium">Watchlist</span> : null}
             </button>
             <button
               onClick={() => setCurrentView("search")}
@@ -163,7 +160,7 @@ export function FeedApp() {
               }`}
             >
               <Search size={24} className="shrink-0" />
-              {isSidebarOpen ? <span className="font-medium">Search</span> : null}
+              {isSidebarOpen ? <span className="font-serif font-medium">Search</span> : null}
             </button>
             <button
               onClick={() => setCurrentView("profile")}
@@ -176,7 +173,7 @@ export function FeedApp() {
               }`}
             >
               <User size={24} className="shrink-0" />
-              {isSidebarOpen ? <span className="font-medium">Profile</span> : null}
+              {isSidebarOpen ? <span className="font-serif font-medium">Profile</span> : null}
             </button>
           </nav>
         </div>

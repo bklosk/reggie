@@ -1,6 +1,9 @@
 # reggie
 
 Regulatory compliance analyst, powered by [Exa](https://github.com/exa-labs)   
+This is deployed on the digitalocean app platform, secrets stored as encrypted env vars (no plaintext keys, sorry)
+
+
 "wha? huh? it stores the onboarding flow but no sign in?" cookies + [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
 ## what should I explore?

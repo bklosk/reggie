@@ -90,9 +90,9 @@ export default async function Home() {
                 </div>
               </div>
               <div className="p-8 flex-grow">
-                <h3 className="font-bold text-lg mb-3 text-white">Automate compliance discovery</h3>
+                <h3 className="font-bold text-lg mb-3 text-white">Radar Search</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Manual searches are slow, and you&apos;ll inevitably miss something. We automate the search for you, so you can focus on the hard parts.
+                  Manual searches are slow, and you&apos;ll inevitably miss something. We keep a general lookout for you, so you have a fighting chance.
                 </p>
               </div>
             </div>
